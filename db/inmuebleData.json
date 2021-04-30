@@ -1,0 +1,42 @@
+{
+    "tittle": "Casa sola a media cuadra de Eugenia y San Borja",
+    "price": 9000000,
+    "features": {
+        "land": 145,
+        "built": 182,
+        "rooms": 4,
+        "bathrooms": 3,
+        "kitchens": 1,
+        "garage": 3
+    },
+    "address": {
+        "line1": "Patricio Sanz 920, Del Valle, Benito Juárez,",
+        "state": "CDMX",
+        "zip": "03100",
+        "city": "Mexico City"
+    },
+    "location": {
+        "lat": 19.3862727,
+        "long": -99.1714229
+    },
+    "description": "Casa para remodelar a tu gusto, con ubicación privilegiada a dos cuadras de Insurgentes y a media cuadra de Eugenia y San Borja. Oportunidad !!!!!!",
+    "type": "Casa",
+    "age": 65,
+    "floors": 3,
+    "contact": {
+        "name": "Mónica Martínez González",
+        "phones": [
+            "+52 5555555555",
+            "5556980432"
+        ],
+        "email": "monimg@century21.com"
+    },
+    "apoiments": [
+        {
+            "ref": "null",
+            "date": {
+                "$date": "2021-05-11T14:30:00Z"
+            }
+        }
+    ]
+}

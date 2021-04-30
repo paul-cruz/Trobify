@@ -17,6 +17,8 @@ services:
         environment: 
             PORT: 5000
             FLASK_DEBUG: 1
+            BD_CONN: mongodb://db-service:27017/
+            DB_NAME: db-trobify
     db-service:
         image: mongo
         volumes:

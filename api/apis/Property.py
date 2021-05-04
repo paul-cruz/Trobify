@@ -2,7 +2,6 @@ import os
 import pymongo
 from flask import jsonify
 from bson.objectid import ObjectId
-from bson.json_util import dumps, loads
 from pymongo.collection import ReturnDocument
 from flask_restplus import Namespace, Resource, fields
 

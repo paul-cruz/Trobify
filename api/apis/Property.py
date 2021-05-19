@@ -2,7 +2,6 @@ import os
 import pymongo
 from flask import jsonify
 from bson.objectid import ObjectId
-from bson.json_util import dumps, loads
 from pymongo.collection import ReturnDocument
 from flask_restplus import Namespace, Resource, fields
 
@@ -84,7 +83,7 @@ class Property(Resource):
         try:
             result = propCol.find_one({'_id': ObjectId(id)})
             if result:
-                return dumps(result)
+                return result
             raise ValueError('Property not found')
         except ValueError as ve:
             print('Property exception', ve)
@@ -93,7 +92,7 @@ class Property(Resource):
             print('Server Error', e)
             api.abort(500)
 
-    @api.doc('get_property')
+    @api.doc('put_property')
     @api.expect(property)
     def put(self, id):
         try:
@@ -112,7 +111,7 @@ class Property(Resource):
             print('Server Error', e)
             api.abort(500)
 
-    @api.doc('get_property')
+    @api.doc('delete_property')
     def delete(self, id):
         try:
             result = propCol.find_one_and_delete({'_id': ObjectId(id)})

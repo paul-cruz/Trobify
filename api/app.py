@@ -3,7 +3,8 @@ import json
 import datetime
 import decimal
 from apis import api
-from flask import Flask, jsonify
+from flask import Flask
+from flask_cors import CORS
 from bson.objectid import ObjectId
 
 
@@ -19,6 +20,7 @@ class JSONEncoder(json.JSONEncoder):
 
 
 app = Flask(__name__)
+CORS(app)
 api.init_app(app)
 
 # use the modified encoder class to handle ObjectId & datetime object while jsonifying the response.

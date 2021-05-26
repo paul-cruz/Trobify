@@ -38,5 +38,11 @@
                 "$date": "2021-05-11T14:30:00Z"
             }
         }
+    ],
+    "images": [
+        "https://century21mexico.com/media/cache/web/rc/d0pAlwdH/uploads/224/propiedades/398234/608b06f9c2b4a.jpg",
+        "https://century21mexico.com/media/cache/web/rc/Y8rSvUwX/uploads/224/propiedades/398234/608b06fb3cdcf.jpg",
+        "https://century21mexico.com/media/cache/web/rc/bR6IPbEv/uploads/224/propiedades/398234/608b06f77d868.jpg",
+        "https://century21mexico.com/media/cache/web/rc/HvSnWQRs/uploads/224/propiedades/398234/608b06f970e5f.jpg"
     ]
 }

@@ -11,10 +11,10 @@ export default function PropertyCarousel({ type, images }) {
                     <img
                         className={`d-block ${type}`}
                         src={url}
-                        alt={`Image ${index}`}
+                        alt={`Property ${index}`}
                     />
                 </Carousel.Item>
-            }) : <Carousel.Item><img src={ImageNotAvailable} className={`d-block ${type}`} /></Carousel.Item>}
+            }) : <Carousel.Item><img src={ImageNotAvailable} className={`d-block ${type}`} alt="Not found"/></Carousel.Item>}
         </Carousel>
     )
 }

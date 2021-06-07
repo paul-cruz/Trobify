@@ -1,0 +1,18 @@
+.image-container img{
+    margin-top: 15px;
+    background: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    
+}
+
+.btn {
+    margin-top: 5px;
+}
+
+.card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

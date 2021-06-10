@@ -1,18 +1,18 @@
 import axios from 'axios';
 
-export const addUser = (user) => {
+export const registerUser = (user) => {
+  console.log(user);
   return axios
-    .post(`${process.env.REACT_APP_API}user`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: user,
-    })
-    .then((res) => {
-      return res.data;
-    });
+      .post(`${process.env.REACT_APP_API}user/`, user, {
+          headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Accept':'*/*' }
+      })
+      .then((res) => {
+          return res;
+      })
+      .catch(error => {
+          return error.response;
+      });
 };
-
 
 export const getProperty = (id) => {
   return axios

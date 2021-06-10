@@ -20,7 +20,7 @@ class JSONEncoder(json.JSONEncoder):
 
 
 app = Flask(__name__)
-CORS(app)
+cors = CORS
 api.init_app(app)
 
 # use the modified encoder class to handle ObjectId & datetime object while jsonifying the response.

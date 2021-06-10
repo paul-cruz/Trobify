@@ -5,6 +5,7 @@ from bson.objectid import ObjectId
 from bson.json_util import dumps, loads
 from pymongo.collection import ReturnDocument
 from flask_restplus import Namespace, Resource, fields
+from flask_cors import cross_origin
 
 myclient = pymongo.MongoClient(os.getenv("BD_CONN"))
 db = myclient[os.getenv("DB_NAME")]
@@ -31,6 +32,7 @@ class Users(Resource):
        
     @api.doc('post_user')
     @api.expect(user)
+    @cross_origin(origin='*', headers=['Content-Type', 'Authorization',])
     def post(self):
         try:
             result_id = propCol.insert_one(api.payload).inserted_id

@@ -6,6 +6,8 @@ import RedirectNotFound from '../Components/Redirect/not-found';
 import PropertyView from '../Views/Property';
 import NewProperty from '../Views/NewProperty';
 import SignUp from '../Views/SignUp';
+import Login from '../Views/Login';
+import ReportForm from '../Components/ReportForm';
 
 const routes = [
     /*{
@@ -15,6 +17,14 @@ const routes = [
     {
         path: '/signup',
         component: SignUp,
+    },
+    {
+        path: '/login',
+        component: Login,
+    },
+    {
+        path: '/newproperty',
+        component: NewProperty,
     },
     {
         path: '/app',
@@ -33,8 +43,8 @@ const routes = [
                 component: GridView,
             },
             {
-                path: '/app/newproperty',
-                component: NewProperty,
+                path: '/app/report',
+                component: ReportForm,
             },
             {
                 path: '/app/*',

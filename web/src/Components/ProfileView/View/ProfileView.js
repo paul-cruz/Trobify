@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomerProfile from './CustomerProfile'
+import BasicInfoUser from '../Basic/BasicInfoUser'
 import ModifyProfile from '../Basic/ModifyProfile'
 
 
@@ -8,7 +8,7 @@ function CPView() {
         <div className="container justify-content-center align-items-center">
             <div className="row">
                 <div className="col-md-4">
-                    <CustomerProfile />
+                    <BasicInfoUser />
                 </div>
                 <div className="col-md-8">
                     <ModifyProfile />

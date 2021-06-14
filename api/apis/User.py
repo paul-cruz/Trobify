@@ -22,6 +22,11 @@ user = api.model('Users', {
     })),
 })
 
+login = api.model('Logins',{
+    "email": fields.String(),
+    "password": fields.String(),
+})
+
 
 @api.route('/')
 @api.response(404, 'User not inserted')
@@ -46,6 +51,8 @@ class Users(Resource):
         except Exception as e:
             print('Server Error', e)
             api.abort(500)
+            
+
 
 
 @api.route('/<id>')
@@ -67,7 +74,7 @@ class User(Resource):
             print('Server Error', e)
             api.abort(500)
 
-    @api.doc('get_user')
+    @api.doc('put_user')
     @api.expect(user)
     def put(self, id):
         try:
@@ -87,12 +94,36 @@ class User(Resource):
             print('Server Error', e)
             api.abort(500)
 
-    @api.doc('get_user')
+    @api.doc('delete_user')
     def delete(self, id):
         try:
             result = propCol.find_one_and_delete({'_id': ObjectId(id)})
             if result:
                 return {'msg': 'Deleted'}, 200
+            raise ValueError('User not found')
+        except ValueError as ve:
+            print('User exception', ve)
+            api.abort(404)
+        except Exception as e:
+            print('Server Error', e)
+            api.abort(500)
+
+
+@api.route('/login')
+@api.response(404, 'User not found')
+@api.response(500, 'Server Error')
+class UserLogin(Resource):
+    @api.doc('login_user')
+    @api.expect(login)
+    def post(self):
+        try:
+            log = api.payload
+            print(log)
+            user = propCol.find_one({'email' : log['email']})
+            if user:
+                if user['password'] == log['password']:
+                    return {'msg': 'Logged', 'id': user['_id']}, 200
+                raise ValueError('Invalid password')
             raise ValueError('User not found')
         except ValueError as ve:
             print('User exception', ve)

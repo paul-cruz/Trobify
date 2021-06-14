@@ -64,6 +64,15 @@
     z-index: 100;
 }
 
+.lang-select{
+    padding: 0em 0.5em 0em 0.5em !important;
+}
+
+.lang-opt{
+    color: white !important;
+    background-color: #6c757d !important;
+}
+
 @media only screen and (max-width: 576px) {
     /* For mobile phones: */
     .sideMenu{

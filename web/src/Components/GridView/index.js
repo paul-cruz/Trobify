@@ -5,7 +5,7 @@ import '../../Styles/custom.css';
 function GridView() {
     const [innerGrid, setGrid] = useState(<Grid action={"default"} user={null} />);//Para los filtros de búsqueda
     return (
-        <div className="grid-fix bg-secondary" id="girdDiv">
+        <div className="grid-fix bg-secondary" id="gridDiv">
             <nav className="navbar navbar-expand-sm position-fixed fl-right sub-nav">
                 <div className="card left-padding right-padding bg-secondary navbar-collapse w-100 order-3 dual-collapse2">
                     <ul className="navbar-nav ml-auto">

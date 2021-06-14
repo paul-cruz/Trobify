@@ -1,0 +1,18 @@
+{
+    "app.loginBtn": "Iniciar Sesión",
+    "app.lang-label": "Lenguaje",
+    "app.property.priceLabel": "Precio de venta",
+    "app.property.land-label": "Terreno: {prop} m2",
+    "app.property.built-label": "Constucción: {prop} m2",
+    "app.property.rooms-label": "Cuartos: {prop}",
+    "app.property.bathrooms-label": "Baños: {prop}",
+    "app.property.kitchens-label": "Cocina: {prop}",
+    "app.property.garage-label": "Estacionamiento: {prop}",
+    "app.property.type-label": "Tipo: {prop}",
+    "app.property.age-label": "Edad: {prop}",
+    "app.property.floors-label": "Pisos: {prop}",
+    "app.property.contact.label": "Contacto",
+    "app.property.contact.name.label": "Nombre",
+    "app.property.contact.phone.label": "Telefonos",
+    "app.property.contact.email.label": "Correo electrónico"
+}

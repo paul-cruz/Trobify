@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import Link from '@material-ui/core/Link';
 import Button from 'react-bootstrap/Button';
 import CardContent from '@material-ui/core/CardContent';
 import IconButton from '@material-ui/core/IconButton';
@@ -38,7 +38,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PropertyTumbnail({ property }) {
     const classes = useStyles();
-    const preventDefault = (event) => event.preventDefault();
 
     return (
         <Card className={classes.root}>
@@ -46,7 +45,7 @@ export default function PropertyTumbnail({ property }) {
             <div className={classes.details}>
                 <CardContent className={classes.content}>
                     <Typography component="h6" variant="h6">
-                        <Link href="#" onClick={preventDefault} color="inherit">
+                        <Link to={`/app/property/${property._id}`} color="inherit">
                             {property.tittle}
                         </Link>
                     </Typography>
@@ -55,7 +54,7 @@ export default function PropertyTumbnail({ property }) {
                     <IconButton aria-label="notification">
                         <NotificationsActiveIcon style={{ color: yellow[800] }} />
                     </IconButton>
-                    <Button variant="success" className="scheduleButton">Agendar cita</Button>
+                    <Button variant="success" className="schbtn">Agendar cita</Button>
                     <IconButton aria-label="favorite">
                         <FavoriteIcon color="secondary" />
                     </IconButton>

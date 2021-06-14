@@ -4,9 +4,12 @@ import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import reportWebVitals from './reportWebVitals';
+import Wrapper from "./Components/Wraper";
 
 ReactDOM.render(
-    <App />
+    <Wrapper>
+        <App />
+    </Wrapper>
     , document.getElementById('root'));
 
 

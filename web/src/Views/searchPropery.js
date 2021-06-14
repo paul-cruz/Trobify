@@ -13,7 +13,7 @@ export default function SearchPropertyView() {
     }, []);
 
     return (
-        <div className="grid-fix" id="girdDiv">
+        <div className="grid-fix" id="gridDiv">
             <nav className="navbar navbar-expand-sm position-fixed fl-right sub-nav">
                 <div className="card left-padding right-padding bg-secondary navbar-collapse w-100 order-3 dual-collapse2">
                     <ul className="navbar-nav ml-auto">

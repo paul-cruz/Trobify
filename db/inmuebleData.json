@@ -7,7 +7,10 @@
         "rooms": 4,
         "bathrooms": 3,
         "kitchens": 1,
-        "garage": 3
+        "garage": 3,
+        "type": "Casa",
+        "age": 65,
+        "floors": 3
     },
     "address": {
         "line1": "Patricio Sanz 920, Del Valle, Benito Juárez,",
@@ -17,12 +20,9 @@
     },
     "location": {
         "lat": 19.3862727,
-        "long": -99.1714229
+        "lng": -99.1714229
     },
     "description": "Casa para remodelar a tu gusto, con ubicación privilegiada a dos cuadras de Insurgentes y a media cuadra de Eugenia y San Borja. Oportunidad !!!!!!",
-    "type": "Casa",
-    "age": 65,
-    "floors": 3,
     "contact": {
         "name": "Mónica Martínez González",
         "phones": [

@@ -10,6 +10,7 @@ import PropertyMap from '../Components/Property/map';
 import { Alert } from 'react-bootstrap';
 import MainInfo from '../Components/Property/mainInfo';
 import PropertyContact from '../Components/Property/contact';
+import PropertySimulator from '../Components/Property/simultator';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -93,7 +94,7 @@ export default function PropertyView() {
                         <Paper className={classes.paper}>Calendar</Paper>
                     </Grid>
                     <Grid item xs={SM_SCREEN_GRID}>
-                        <Paper className={classes.paper}>Simulator</Paper>
+                        <PropertySimulator propertyCost={property.price}/>
                     </Grid>
                 </Grid>
             </Grid>

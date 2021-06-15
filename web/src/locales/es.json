@@ -14,5 +14,12 @@
     "app.property.contact.label": "Contacto",
     "app.property.contact.name.label": "Nombre",
     "app.property.contact.phone.label": "Telefonos",
-    "app.property.contact.email.label": "Correo electrónico"
+    "app.property.contact.email.label": "Correo electrónico",
+    "app.property.simulator.label": "Simulador de hipoteca",
+    "app.property.simulator.price-label": "Precio de la propiedad: ",
+    "app.property.simulator.cost-label": "Total del credito: ",
+    "app.property.simulator.duration-label": "Duración del credito: ",
+    "app.property.simulator.total-label": "Total a pagar: ",
+    "app.property.simulator.month-label": "Plazo en meses: ",
+    "app.property.simulator.interest-label": "Intereses generados: "
 }

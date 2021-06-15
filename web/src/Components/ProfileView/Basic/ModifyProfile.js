@@ -20,7 +20,7 @@ function ModifyProfile() {
 
     const classes = useStyles()
     const [inputFields, setInputFields] = useState([
-        { firstName: '', lastName: '', email: '', phoneNumber: '' },
+        { firstName: '', lastName: '', email: '', phoneNumber: '', url: '' },
     ]);
 
     const handleSubmit = (e) => {
@@ -79,6 +79,18 @@ function ModifyProfile() {
                                         label="Teléfono"
                                         variant="filled"
                                         value={inputField.phoneNumber}
+                                        onChange={event => handleChangeInput(index, event)}
+                                    />
+                                </div>
+                                <div className="form-group input-group mb-3">
+                                    <TextField
+                                        id="standard-full-width"
+                                        name="url"
+                                        label="URL"
+                                        fullWidth
+                                        variant="filled"
+                                        helperText="Si desea cambiar su foto de perfil, ingrese la URL de la nueva."
+                                        value={inputField.url}
                                         onChange={event => handleChangeInput(index, event)}
                                     />
                                 </div>

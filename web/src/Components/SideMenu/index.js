@@ -14,9 +14,10 @@ export default function SideMenu() {
                 <li className="side-li"><button className="btn btn-dark"><Link to="/app/grid">Notificaciones</Link></button></li>
                 <li className="side-li"><button className="btn btn-dark">Alertas</button></li>
                 <li className="side-li"><button className="btn btn-dark">Perfil</button></li>
-                <li className="side-li"><button className="btn btn-dark">Nuevo</button></li>
+                <li className="side-li"><button className="btn btn-dark"><Link to="/newproperty">Nuevo</Link></button></li>
                 <li className="side-li"><button className="btn btn-dark">3D</button></li>
                 <li className="side-li"><button className="btn btn-dark">Agenda</button></li>
+                <li className="side-li"><button className="btn btn-dark"><Link to="/app/report">Reportar error</Link></button></li>
             </ul>
         </div>
     );

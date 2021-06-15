@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "nombrePropiedad": "Casa Azul en las Lomas",
+        "descripcionPropiedad": "Bonita casa azul en las Lomas, cuenta con 3 habitaciones con baño cada una.",
+        "fechaVisita": "dd-mm-aaaa",
+        "horaVisita": "HH:MM"
+    }
+]

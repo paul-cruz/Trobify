@@ -78,7 +78,7 @@ function hideMenu() {
     }
     else {
         menu.style = 'transform: translate(0vh, 0)';
-        grid.style = 'margin-left: 40vh';
+        grid.style = 'margin-left: 43vh';
         propertyCarousel.forEach(element => {
             element.classList.remove("h-225");
         });

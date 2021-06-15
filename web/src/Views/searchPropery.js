@@ -6,11 +6,29 @@ import PropertyTumbnail from '../Components/Property/tumbnail';
 
 export default function SearchPropertyView() {
     const GRID_SPACING = 2;
+    const [inputValue, setInputValue] = useState('');
     const [properties, setProperties] = useState([]);
+    const [filtredProperties, setFiltredProperties] = useState([]);
 
     useEffect(() => {
-        getProperties().then((propertylist) => { setProperties(propertylist) });
+        getProperties().then((propertylist) => {
+            setProperties(propertylist);
+            setFiltredProperties(propertylist)
+        });
     }, []);
+
+    function handleChange(e) {
+        if (!/^[a-zA-Z\s]*$/.test(e.target.value)) {
+            alert("Solo se aceptan letras");
+            return;
+        }
+        setInputValue(e.target.value);
+        let result = [];
+        result = properties.filter((data) => {
+            return data.tittle.toLowerCase().search(e.target.value.toLowerCase()) != -1;
+        });
+        setFiltredProperties(result);
+    }
 
     return (
         <div className="grid-fix" id="gridDiv">
@@ -19,7 +37,7 @@ export default function SearchPropertyView() {
                     <ul className="navbar-nav ml-auto">
                         <li>
                             <div className="input-group text-light btn-margin right-padding">
-                                <input type="text" className="form-control" placeholder="Buscar" />
+                                <input type="text" className="form-control" placeholder="Buscar" value={inputValue} onChange={handleChange} />
                                 <div className="input-group-append">
                                     <button className="btn btn-dark" type="button">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
@@ -57,8 +75,8 @@ export default function SearchPropertyView() {
             </nav>
             <div className="p-t-sub" id="Grid">
                 <Grid container spacing={GRID_SPACING}>
-                    {properties && properties.map((property, index) => {
-                        return <Grid key={index} item lg={6} md={6} sm={12} spacing={GRID_SPACING}>
+                    {filtredProperties && filtredProperties.map((property, index) => {
+                        return <Grid container key={index} item lg={6} md={6} sm={12} spacing={GRID_SPACING}>
                             <PropertyTumbnail property={property} />
                         </Grid>;
                     })}

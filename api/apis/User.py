@@ -65,7 +65,7 @@ class User(Resource):
         try:
             result = propCol.find_one({'_id': ObjectId(id)})
             if result:
-                return dumps(result)
+                return result
             raise ValueError('User not found')
         except ValueError as ve:
             print('User exception', ve)

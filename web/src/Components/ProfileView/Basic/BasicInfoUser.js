@@ -3,6 +3,7 @@ import './InfoPerfil.css'
 import { getLoggedUserId } from '../../../Utils/auth'
 import { getUser } from '../../../Utils/functions'
 import { useState } from 'react'
+import Loading from '../../Loading'
 
 function BasicInfoUser() {
 
@@ -11,32 +12,30 @@ function BasicInfoUser() {
     useEffect(() => {
         getUser(getLoggedUserId()).then((info) => {
             setinfoUsuario(info)
+
         });
     }, []);
 
     return (
-
         <div className="card mt-4 align-items-center text-center">
 
             <div className="card-body">
-                {infoUsuario.map((info, index) => {
-                    return (
-                        <div>
-                            <div className="image-container">
-                                <img src={info.url} alt=" " height="150px" width="150px" />
-                            </div>
-                            <div key={info.id} className="card-body">
-                                <h4 className="card-title"> {info.firstName} </h4>
-                                <h4 className="card-title"> {info.lastName} </h4>
-                                <p className="card-text text-secondary"> {info.email} </p>
-                                <p className="card-text text-secondary"> {info.phoneNumber} </p>
-                            </div>
+                {infoUsuario ?
+                    <div>
+                        <div className="image-container">
+                            <img src="https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg" alt=" " height="150px" width="150px" />
                         </div>
-                    )
-                })}
+                        <div key={infoUsuario.id} className="card-body">
+                            <h4 className="card-title"> {infoUsuario.first_name} </h4>
+                            <h4 className="card-title"> {infoUsuario.last_name} </h4>
+                            <p className="card-text text-secondary"> {infoUsuario.email} </p>
+                            <p className="card-text text-secondary"> {infoUsuario.phone_number} </p>
+                        </div>
+                    </div>
+
+                    : <Loading></Loading>}
             </div>
         </div>
-
     )
 }
 

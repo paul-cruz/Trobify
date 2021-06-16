@@ -90,6 +90,7 @@ export const getUser = (id) => {
       }
     })
     .then((res) => {
+      console.log(res);
       return res.data;
     });
 };

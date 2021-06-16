@@ -5,7 +5,7 @@ import ModifyProfile from '../Basic/ModifyProfile'
 
 function CPView() {
     return (
-        <div className="container justify-content-center align-items-center">
+        <div id="gridDiv" className="grid-fix">
             <div className="row">
                 <div className="col-md-4">
                     <BasicInfoUser />

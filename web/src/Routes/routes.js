@@ -8,6 +8,7 @@ import NewProperty from '../Views/NewProperty';
 import SignUp from '../Views/SignUp';
 import Login from '../Views/Login';
 import ReportForm from '../Components/ReportForm';
+import ProfileView from '../Components/ProfileView/View';
 
 const routes = [
     /*{
@@ -45,6 +46,10 @@ const routes = [
             {
                 path: '/app/report',
                 component: ReportForm,
+            },
+            {
+                path: '/app/profile',
+                component: ProfileView,
             },
             {
                 path: '/app/*',

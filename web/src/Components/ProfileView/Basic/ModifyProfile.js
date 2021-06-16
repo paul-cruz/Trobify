@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import { getLoggedUserId } from '../../../Utils/auth'
+import { getUser, updateUser } from '../../../Utils/functions'
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -19,20 +21,28 @@ const useStyles = makeStyles((theme) => ({
 function ModifyProfile() {
 
     const classes = useStyles()
-    const [inputFields, setInputFields] = useState([
-        { firstName: '', lastName: '', email: '', phoneNumber: '', url: '' },
+    const [inputField, setInputField] = useState([
+        { first_name: '', last_name: '', email: '', phone_number: '' },
     ]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("InputFields", inputFields);
+        console.log(inputField);
+        updateUser(getLoggedUserId(), inputField);
     };
 
-    const handleChangeInput = (index, event) => {
-        const values = [...inputFields];
-        values[index][event.target.name] = event.target.value;
-        setInputFields(values);
+    const handleChangeInput = (event) => {
+        const values = { ...inputField };
+        values[event.target.name] = event.target.value;
+        setInputField(values);
     };
+
+    useEffect(() => {
+        getUser(getLoggedUserId()).then((info) => {
+            setInputField({ first_name: info.first_name, last_name: info.last_name, email: info.email, phone_number: info.phone_number })
+        });
+    }, []);
+
 
     return (
         <Container className="container text-center">
@@ -42,60 +52,64 @@ function ModifyProfile() {
                 </div>
                 <div className="card-body">
                     <form className={classes.root} onSubmit={handleSubmit}>
-                        {inputFields.map((inputField, index) => (
-                            <div key={index} className="justify-content-center">
-                                <div className="form-group input-group mb-3">
-                                    <TextField
-                                        id="filled-full-width"
-                                        name="firstName"
-                                        label="Nombre"
-                                        fullWidth
-                                        variant="filled"
-                                        value={inputField.firstName}
-                                        onChange={event => handleChangeInput(index, event)}
-                                    />
-                                </div>
-                                <div className="form-group input-group mb-3">
-                                    <TextField
-                                        id="filled-full-width"
-                                        name="lastName"
-                                        label="Apellido"
-                                        fullWidth
-                                        variant="filled"
-                                        value={inputField.lastName}
-                                        onChange={event => handleChangeInput(index, event)}
-                                    />
-                                </div>
-                                <div className="form-group input-group mb-3">
-                                    <TextField
-                                        name="email"
-                                        label="E-mail"
-                                        variant="filled"
-                                        value={inputField.email}
-                                        onChange={event => handleChangeInput(index, event)}
-                                    />
-                                    <TextField
-                                        name="phoneNumber"
-                                        label="Teléfono"
-                                        variant="filled"
-                                        value={inputField.phoneNumber}
-                                        onChange={event => handleChangeInput(index, event)}
-                                    />
-                                </div>
-                                <div className="form-group input-group mb-3">
-                                    <TextField
-                                        id="standard-full-width"
-                                        name="url"
-                                        label="URL"
-                                        fullWidth
-                                        variant="filled"
-                                        helperText="Si desea cambiar su foto de perfil, ingrese la URL de la nueva."
-                                        value={inputField.url}
-                                        onChange={event => handleChangeInput(index, event)}
-                                    />
-                                </div>
+                        <div className="justify-content-center">
+                            <div className="form-group input-group mb-3">
+                                <TextField
+                                    id="outlined-full-width"
+                                    name="first_name"
+                                    label="Nombre"
+                                    fullWidth
+                                    margin="normal"
+                                    InputLabelProps={{
+                                        shrink: true,
+                                    }}
+                                    variant="outlined"
+                                    value={inputField.first_name}
+                                    onChange={event => handleChangeInput(event)}
+                                />
                             </div>
-                        ))}
+                            <div className="form-group input-group mb-3">
+                                <TextField
+                                    id="outlined-full-width"
+                                    name="last_name"
+                                    label="Apellido"
+                                    fullWidth
+                                    margin="normal"
+                                    InputLabelProps={{
+                                        shrink: true,
+                                    }}
+                                    variant="outlined"
+                                    value={inputField.last_name}
+                                    onChange={event => handleChangeInput(event)}
+                                />
+                            </div>
+                            <div className="form-group input-group mb-3">
+                                <TextField
+                                    id="outlined"
+                                    name="email"
+                                    label="E-mail"
+                                    margin="normal"
+                                    InputLabelProps={{
+                                        shrink: true,
+                                    }}
+                                    variant="outlined"
+                                    value={inputField.email}
+                                    onChange={event => handleChangeInput(event)}
+                                />
+                                <TextField
+                                    id="outlined"
+                                    name="phone_number"
+                                    label="Teléfono"
+                                    margin="normal"
+                                    InputLabelProps={{
+                                        shrink: true,
+                                    }}
+                                    variant="outlined"
+                                    value={inputField.phone_number}
+                                    onChange={event => handleChangeInput(event)}
+                                />
+                            </div>
+                        </div>
                         <Button
                             className={classes.button}
                             variant="contained"

@@ -94,3 +94,18 @@ export const getUser = (id) => {
       return res.data;
     });
 };
+
+export const updateUser = (id, user) => {
+  return axios
+    .put(`${process.env.REACT_APP_API}user/${id}`, user, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then((res) => {
+      return res;
+    })
+    .catch(error => {
+      return error.response;
+    });
+};

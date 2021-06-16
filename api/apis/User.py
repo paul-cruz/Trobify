@@ -79,6 +79,7 @@ class User(Resource):
     def put(self, id):
         try:
             doc = api.payload
+            print(doc, id)
             result = propCol.find_one_and_update(
                 {'_id': ObjectId(id)},
                 {'$set': doc},

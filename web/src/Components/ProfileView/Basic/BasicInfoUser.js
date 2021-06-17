@@ -23,7 +23,7 @@ function BasicInfoUser() {
                 {infoUsuario ?
                     <div>
                         <div className="image-container">
-                            <img src="https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg" alt=" " height="150px" width="150px" />
+                            <img src="http://www.pngall.com/profile-png/download/51607" alt=" " height="150px" width="150px" />
                         </div>
                         <div key={infoUsuario.id} className="card-body">
                             <h4 className="card-title"> {infoUsuario.first_name} </h4>

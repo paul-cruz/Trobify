@@ -47,7 +47,7 @@ const PrettoSlider = withStyles({
 export default function PropertySimulator({ propertyCost }) {
     const classes = useStyles();
     const [duration, setDuration] = useState(5);
-    const [cost, setCost] = useState(100000);
+    const [cost, setCost] = useState(propertyCost * 0.25);
     const [total, setTotal] = useState(getTotal());
 
     function handleCahnge(label, value) {
@@ -106,7 +106,7 @@ export default function PropertySimulator({ propertyCost }) {
                 <PrettoSlider valueLabelDisplay="auto" aria-label="pretto slider"
                     name="cost"
                     defaultValue={100000}
-                    min={100000}
+                    min={propertyCost * 0.25}
                     max={propertyCost * 0.8}
                     valueLabelFormat={valueLabelFormat}
                     value={cost}

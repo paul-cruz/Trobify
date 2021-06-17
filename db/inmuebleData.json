@@ -1,48 +1,435 @@
-{
-    "tittle": "Casa sola a media cuadra de Eugenia y San Borja",
-    "price": 9000000,
-    "features": {
-        "land": 145,
-        "built": 182,
-        "rooms": 4,
-        "bathrooms": 3,
-        "kitchens": 1,
-        "garage": 3,
-        "type": "Casa",
-        "age": 65,
-        "floors": 3
+[
+    {
+        "tittle": "Casa sola a media cuadra de Eugenia y San Borja",
+        "price": 9000000,
+        "features": {
+            "land": 145,
+            "built": 182,
+            "rooms": 4,
+            "bathrooms": 3,
+            "kitchens": 1,
+            "garage": 3,
+            "type": "Casa",
+            "age": 65,
+            "floors": 3
+        },
+        "address": {
+            "line1": "Patricio Sanz 920, Del Valle, Benito Juárez,",
+            "state": "CDMX",
+            "zip": "03100",
+            "city": "Mexico City"
+        },
+        "location": {
+            "lat": 19.3862727,
+            "lng": -99.1714229
+        },
+        "description": "Casa para remodelar a tu gusto, con ubicación privilegiada a dos cuadras de Insurgentes y a media cuadra de Eugenia y San Borja. Oportunidad !!!!!!",
+        "contact": {
+            "name": "Mónica Martínez González",
+            "phones": [
+                "+52 5555555555",
+                "5556980432"
+            ],
+            "email": "monimg@century21.com"
+        },
+        "apoiments": [],
+        "images": [
+            "https://century21mexico.com/media/cache/web/rc/d0pAlwdH/uploads/224/propiedades/398234/608b06f9c2b4a.jpg",
+            "https://century21mexico.com/media/cache/web/rc/Y8rSvUwX/uploads/224/propiedades/398234/608b06fb3cdcf.jpg",
+            "https://century21mexico.com/media/cache/web/rc/bR6IPbEv/uploads/224/propiedades/398234/608b06f77d868.jpg",
+            "https://century21mexico.com/media/cache/web/rc/HvSnWQRs/uploads/224/propiedades/398234/608b06f970e5f.jpg"
+        ]
     },
-    "address": {
-        "line1": "Patricio Sanz 920, Del Valle, Benito Juárez,",
-        "state": "CDMX",
-        "zip": "03100",
-        "city": "Mexico City"
+    {
+        "tittle": "Departamento en renta",
+        "price": 5630,
+        "features": {
+            "land": 47,
+            "built": 47,
+            "rooms": 1,
+            "bathrooms": 1,
+            "kitchens": 1,
+            "garage": 0,
+            "type": "Departamento",
+            "age": 50,
+            "floors": 1
+        },
+        "address": {
+            "line1": "Guerrero 182, Buenavista, Cuauhtémoc",
+            "state": "CDMX",
+            "zip": "06350",
+            "city": "Ciudad De México"
+        },
+        "location": {
+            "lat": 19.4467543,
+            "lng": -99.1474854
+        },
+        "description": "Departamento exterior\nDe 47 mts2 de construcción.\nUbicado en quinto nivel.\nSala comedor.\nCocina integral.\n1 recámara con closet.\n1 baño completo.\nGas natural.\nÁrea de lavado.\n50 años de Antigüedad.\nVentajas de la zona:\nA dos cuadras del Metro y metrobus Guerrero\nA tres cuadras del Metro Buenavista.\nA 5 minutos del Centro Comercial Fórum Buenavista",
+        "contact": {
+            "name": "Century 21",
+            "phones": [
+                "55 6719 5000",
+                "55 6719 6000"
+            ],
+            "email": "ventas@century21hogar.com"
+        },
+        "apoiments": [],
+        "images": [
+            "https://century21mexico.com/media/cache/web/rc/d0pAlwdH/uploads/224/propiedades/398234/608b06f9c2b4a.jpg",
+            "https://century21mexico.com/media/cache/web/rc/Y8rSvUwX/uploads/224/propiedades/398234/608b06fb3cdcf.jpg",
+            "https://century21mexico.com/media/cache/web/rc/bR6IPbEv/uploads/224/propiedades/398234/608b06f77d868.jpg",
+            "https://century21mexico.com/media/cache/web/rc/HvSnWQRs/uploads/224/propiedades/398234/608b06f970e5f.jpg"
+        ]
     },
-    "location": {
-        "lat": 19.3862727,
-        "lng": -99.1714229
+    {
+        "tittle": "Departamento en venta",
+        "price": 21000000,
+        "features": {
+            "land": 170,
+            "built": 170,
+            "rooms": 3,
+            "bathrooms": 2,
+            "kitchens": 1,
+            "garage": 2,
+            "type": "Departamento",
+            "age": 5,
+            "floors": 1
+        },
+        "address": {
+            "line1": "Sócrates 459, Polanco Reforma, Miguel Hidalgo",
+            "state": "CDMX",
+            "zip": "11550",
+            "city": "Mexico City"
+        },
+        "location": {
+            "lat": 19.430559,
+            "lng": -99.204417
+        },
+        "description": "Lujoso departamento en Polanco, a unas cuadras del parque del Reloj, Reforma Lomas y la sEmbajadas. cuenta con Sala comedor, cocina de concepto abierto con línea blanca de primera calidad recámara principal con vestidor, baño de vapor, balcón corrido y persianas black out.\nven a visitarlo, te encantara",
+        "contact": {
+            "name": "Century 21 FERLIFE",
+            "phones": [
+                "(55) 5652 0844"
+            ],
+            "email": "contacto@c21ferlife.com"
+        },
+        "apoiments": [],
+        "images": [
+            "https://century21mexico.com/media/cache/web/rc/KSKDrPlS/uploads/326/propiedades/404722/60ca8b093ddc1.jpg",
+            "https://century21mexico.com/media/cache/resolve/web/rc/lrIq9PRv/uploads/326/propiedades/404722/60ca8b091c521.jpg?filters%5Bdownscale%5D%5Bmax%5D%5B0%5D=1980&filters%5Bdownscale%5D%5Bmax%5D%5B1%5D=1280",
+            "https://century21mexico.com/media/cache/resolve/web/rc/zHNJVstm/uploads/326/propiedades/404722/60ca8b07c9c14.jpg?filters%5Bdownscale%5D%5Bmax%5D%5B0%5D=1980&filters%5Bdownscale%5D%5Bmax%5D%5B1%5D=1280",
+            "https://century21mexico.com/media/cache/resolve/web/rc/FzDVSHWd/uploads/326/propiedades/404722/60ca8b092d354.jpg?filters%5Bdownscale%5D%5Bmax%5D%5B0%5D=1980&filters%5Bdownscale%5D%5Bmax%5D%5B1%5D=1280"
+        ]
     },
-    "description": "Casa para remodelar a tu gusto, con ubicación privilegiada a dos cuadras de Insurgentes y a media cuadra de Eugenia y San Borja. Oportunidad !!!!!!",
-    "contact": {
-        "name": "Mónica Martínez González",
-        "phones": [
-            "+52 5555555555",
-            "5556980432"
-        ],
-        "email": "monimg@century21.com"
+    {
+        "tittle": "Terreno en venta",
+        "price": 3895500,
+        "features": {
+            "land": 246,
+            "type": "Terreno",
+            "age": 50
+        },
+        "address": {
+            "line1": "Aquiles Serdan S/N, Tierra Nueva, Azcapotzalco",
+            "state": "CDMX",
+            "zip": "02130",
+            "city": "Mexico City"
+        },
+        "location": {
+            "lat": 19.497,
+            "lng": -99.2
+        },
+        "description": "Terreno rectangular con dos frentes, uso habitacional, cuatro niveles.\nConstrucciones mínimas, documentos en orden.\n¡¡¡Marcanos y agenda tu cita!!!!",
+        "contact": {
+            "name": "Carlos Daniel Franco Piña",
+            "phones": [
+                "5386-0475",
+                "5386-0625",
+                "0445611686845"
+            ],
+            "email": "carlos.franco@c21gt.com"
+        },
+        "apoiments": [],
+        "images": [
+            "https://century21mexico.com/media/cache/web/rc/3306EjOn/uploads/349/propiedades/331544/60ca71ed699cb.jpeg",
+            "https://century21mexico.com/media/cache/web/rc/RMRU7Bxg/uploads/349/propiedades/331544/60ca71eec7656.jpeg"
+        ]
     },
-    "apoiments": [
-        {
-            "ref": "null",
-            "date": {
-                "$date": "2021-05-11T14:30:00Z"
-            }
-        }
-    ],
-    "images": [
-        "https://century21mexico.com/media/cache/web/rc/d0pAlwdH/uploads/224/propiedades/398234/608b06f9c2b4a.jpg",
-        "https://century21mexico.com/media/cache/web/rc/Y8rSvUwX/uploads/224/propiedades/398234/608b06fb3cdcf.jpg",
-        "https://century21mexico.com/media/cache/web/rc/bR6IPbEv/uploads/224/propiedades/398234/608b06f77d868.jpg",
-        "https://century21mexico.com/media/cache/web/rc/HvSnWQRs/uploads/224/propiedades/398234/608b06f970e5f.jpg"
-    ]
-}
+    {
+        "tittle": "Oficinas en renta",
+        "price": 27000,
+        "features": {
+            "land": 170,
+            "built": 170,
+            "rooms": 4,
+            "bathrooms": 3,
+            "kitchens": 1,
+            "garage": 3,
+            "type": "Oficinas",
+            "age": 34,
+            "floors": 4
+        },
+        "address": {
+            "line1": "Pilares , Del Valle, Benito Juárez",
+            "state": "CDMX",
+            "zip": "03100",
+            "city": "Mexico City"
+        },
+        "location": {
+            "lat": 19.3781267,
+            "lng": -99.1679734
+        },
+        "description": "Oficinas en Renta con excelente ubicación, amplios espacios muy iluminados, en la Colonia Del Valle, calle Pilares, cerca de avenidas principales como Insurgentes y División de Norte. Cuenta con recepción, sala de juntas, 7 despachos, cocineta, baños para hombres y mujeres.",
+        "contact": {
+            "name": "Alma Salcedo Ramirez",
+            "phones": [
+                "5521205521",
+                "+525571490867"
+            ],
+            "email": "alma.salcedo@c21apolo.com"
+        },
+        "apoiments": [],
+        "images": [
+            "https://century21mexico.com/media/cache/web/rc/d4Wql4dK/uploads/448/propiedades/404685/609ef4a7e485d.png",
+            "https://century21mexico.com/media/cache/web/rc/fpH1HD2h/uploads/448/propiedades/404685/609ef20320a8c.jpeg",
+            "https://century21mexico.com/media/cache/web/rc/lJxUFQlc/uploads/448/propiedades/404685/609ef202d26b4.jpeg",
+            "https://century21mexico.com/media/cache/web/rc/XZiJBR8V/uploads/448/propiedades/404685/609ef2033aa5c.jpeg"
+        ]
+    },
+    {
+        "tittle": "Departamento en renta",
+        "price": 9500,
+        "features": {
+            "land": 60,
+            "built": 60,
+            "rooms": 3,
+            "bathrooms": 1,
+            "kitchens": 1,
+            "garage": 1,
+            "type": "Departamento",
+            "age": 27,
+            "floors": 1
+        },
+        "address": {
+            "line1": "Avenida la escalera 300, La Escalera, Gustavo A. Madero",
+            "state": "CDMX",
+            "zip": "07320",
+            "city": "Mexico City"
+        },
+        "location": {
+            "lat": 19.5113512,
+            "lng": -99.139461
+        },
+        "description": "Departamento en renta, en avenida principal, cerca de escuelas IPN, plazas comerciales,estancia cocina integral, sala dos recamaras 1 espacio para tercer recamara o estudio, baño, estacionamiento, area para tender.",
+        "contact": {
+            "name": "AGUSTINA MORALES CALBA",
+            "phones": [
+                "5555112853",
+                "5580366538"
+            ],
+            "email": "amorales@c21hh.com"
+        },
+        "apoiments": [],
+        "images": [
+            "https://century21mexico.com/media/cache/web/rc/2gLndDQh/uploads/392/propiedades/402897/60b91b8054f1e.jpeg",
+            "https://century21mexico.com/media/cache/web/rc/EyWEAJQ1/uploads/392/propiedades/402897/60b91b80252c0.jpeg",
+            "https://century21mexico.com/media/cache/web/rc/oXpb1v1a/uploads/392/propiedades/402897/60b91b59764e0.jpeg",
+            "https://century21mexico.com/media/cache/web/rc/umNVyOym/uploads/392/propiedades/402897/60b91b8232726.jpeg"
+        ]
+    },
+    {
+        "tittle": "Departamento en renta",
+        "price": 14000,
+        "features": {
+            "land": 85,
+            "built": 85,
+            "rooms": 2,
+            "bathrooms": 2,
+            "kitchens": 1,
+            "garage": 1,
+            "type": "Departamento",
+            "age": 39,
+            "floors": 1
+        },
+        "address": {
+            "line1": "Yosemite 87 depto 604, Nápoles, Benito Juárez",
+            "state": "CDMX",
+            "zip": "03810",
+            "city": "Mexico City"
+        },
+        "location": {
+            "lat": 19.3976978,
+            "lng": -99.1746562
+        },
+        "description": "Departamento en renta en la colonia Nápoles. Amplio, con una superficie de 85 m2, muy iluminado, vista exterior, calle cerrada, privada y muy tranquila. 2 recámaras, 2 baños completos, 1 lugar de estacionamiento fijo e independiente, portón eléctrico, elevador, excelente estado de conservación, jaula de tendido. Todos los servicios funcionando. Muy cercano a tiendas departamentales, restaurantes, colegios, bancos, WTC, supermercados, etc. Se aceptan mascotas.",
+        "contact": {
+            "name": "Eduardo Herrera",
+            "phones": [
+                "+525554183694"
+            ],
+            "email": "dirop@c21erealtors.com"
+        },
+        "apoiments": [],
+        "images": [
+            "https://century21mexico.com/media/cache/web/rc/ixDsoDVc/uploads/420/propiedades/404679/60ca688b1939c.JPG",
+            "https://century21mexico.com/media/cache/web/rc/oRFfQbfS/uploads/420/propiedades/404679/60ca688852894.JPG",
+            "https://century21mexico.com/media/cache/web/rc/6XHlIVgp/uploads/420/propiedades/404679/60ca688ef25bf.JPG",
+            "https://century21mexico.com/media/cache/web/rc/vf7SdEA9/uploads/420/propiedades/404679/6022bc7ea21c2.jpg"
+        ]
+    },
+    {
+        "tittle": "Terreno en venta",
+        "price": 69000000,
+        "features": {
+            "land": 1000,
+            "built": 1000,
+            "type": "Terreno",
+            "age": 35
+        },
+        "address": {
+            "line1": "Tennesse , Nápoles Amp, Benito Juárez",
+            "state": "CDMX",
+            "zip": "03840",
+            "city": "Mexico City"
+        },
+        "location": {
+            "lat": 19.3862469,
+            "lng": -99.1758024
+        },
+        "description": "Excelente terreno en venta en la colonia Nápoles, una de las mejores colonias de la CDMX y con alta plusvalía. ¡Gran oportunidad para desarrolladores! son 1000 m2. Actualmente es un inmueble de producto.Uso de suelo: H6/30 y habitacional con comercio. Superficie máxima de construcción 4220 m2.",
+        "contact": {
+            "name": "Yolanda Ibarra Rodríguez",
+            "phones": [
+                "+525539036360"
+            ],
+            "email": "yolanda.ibarra@c21apolo.com"
+        },
+        "apoiments": [],
+        "images": [
+            "https://century21mexico.com/media/cache/web/rc/6Wyo6E55/uploads/448/propiedades/404483/60ca5f4c7b841.jpg"
+        ]
+    },
+    {
+        "tittle": "Departamento en venta",
+        "price": 2800000,
+        "features": {
+            "land": 72,
+            "built": 72,
+            "rooms": 3,
+            "bathrooms": 1,
+            "kitchens": 1,
+            "garage": 1,
+            "type": "Departamento",
+            "age": 40,
+            "floors": 1
+        },
+        "address": {
+            "line1": "Segundo Retorno del Tercer Anillo de Circunvalación Edificio 32 depa 303 32, Lomas De Sotelo, Miguel Hidalgo",
+            "state": "CDMX",
+            "zip": "11200",
+            "city": "Mexico City"
+        },
+        "location": {
+            "lat": 19.449,
+            "lng": -99.214
+        },
+        "description": "Departamento en excelente ubicación, muy cerca de Río San Joaquín, Centros Comerciales, Colegios y Supermercados, remodelado.\nDistribuido en 72 m2, con sala, comedor, cocina integral, área de lavado, 2 o 3 recámaras, con clósets y 1 baño completo.",
+        "contact": {
+            "name": "Edith Delgadillo López",
+            "phones": [
+                "+52 5555555555",
+                "5556980432"
+            ],
+            "email": "edith@century21.com"
+        },
+        "apoiments": [],
+        "images": [
+            "https://century21mexico.com/media/cache/web/rc/fb2bmKig/uploads/359/propiedades/404662/60ca8d2b80a0a.jpeg",
+            "https://century21mexico.com/media/cache/web/rc/wvLtJn4x/uploads/359/propiedades/404662/60ca8d2c9546e.jpeg",
+            "https://century21mexico.com/media/cache/web/rc/eRcYlR4J/uploads/359/propiedades/404662/thumb935ca40cb555e34.jpg",
+            "https://century21mexico.com/media/cache/web/rc/8JmvjtHR/uploads/359/propiedades/404662/60ca8d2de2106.jpeg"
+        ]
+    },
+    {
+        "tittle": "Departamento en renta",
+        "price": 14000,
+        "features": {
+            "land": 54,
+            "built": 54,
+            "rooms": 1,
+            "bathrooms": 1,
+            "kitchens": 1,
+            "garage": 1,
+            "type": "Departamento",
+            "age": 40,
+            "floors": 1
+        },
+        "address": {
+            "line1": "Polanco Reforma, Miguel Hidalgo",
+            "state": "CDMX",
+            "zip": "11550",
+            "city": "Mexico City"
+        },
+        "location": {
+            "lat": 19.4368173,
+            "lng": -99.1947866
+        },
+        "description": "El departamento tiene una espectacular vista arbolada, en excelente ubicación, rodeado de restaurantes, parques, colegios, instituciones de salud, muy cerca de Plaza Miyana y Centro Comercial Antara, a 2 cuadras de Masaryk.\nSe encuentra en el sexto piso, exterior, muy iluminado y consta de espacio de sala, comedor, cocina integral con refrigerador incluido, 1 recámara con clóset, 1 baño completo, 1 bodega y 1 lugar de estacionamiento.",
+        "contact": {
+            "name": "Edith Delgadillo López",
+            "phones": [
+                "+52 5555555555",
+                "5556980432"
+            ],
+            "email": "edith@century21.com"
+        },
+        "apoiments": [],
+        "images": [
+            "https://century21mexico.com/media/cache/web/rc/cUMxRMPa/uploads/359/propiedades/404549/60c9583beba4f.jpg",
+            "https://century21mexico.com/media/cache/web/rc/sD9iyt96/uploads/359/propiedades/404549/60ca4ec40ead0.jpg",
+            "https://century21mexico.com/media/cache/web/rc/n3o6cIiV/uploads/359/propiedades/404549/60ca4ec3d29ca.jpg",
+            "https://century21mexico.com/media/cache/web/rc/Gx63mMHR/uploads/359/propiedades/404549/60c9587154f67.jpg"
+        ]
+    },
+    {
+        "tittle": "Departamento en renta",
+        "price": 12000,
+        "features": {
+            "land": 120,
+            "built": 120,
+            "rooms": 3,
+            "bathrooms": 1,
+            "kitchens": 1,
+            "garage": 0,
+            "type": "Departamento",
+            "age": 40,
+            "floors": 1
+        },
+        "address": {
+            "line1": "José María Vertiz 481, D3, Piedad Narvarte, Benito Juárez",
+            "state": "CDMX",
+            "zip": "03000",
+            "city": "Mexico City"
+        },
+        "location": {
+            "lat": 19.4037315,
+            "lng": -99.1504982
+        },
+        "description": "Departamento ubicado en tercer nivel con superficie de 120 m2, consta de sala, comedor, cocina sin equipar solamente con tarja, tres recámaras, solo una cuenta con closet, baño completo, no cuenta con estacionamiento ni elevador. NO SE ACEPTAN MASCOTAS. Requisitos que se deberán cubrir: Una renta de depósito, una renta adelantada, presentar un Obligado Solidario y cubrir una Póliza Jurídica cuyo costo es de $5,150.00. Inquilino: 1. Identificación oficial. 2. Comprobante de domicilio. 3. Comprobante de ingresos de 3 meses a la fecha (Recibos de nómina, facturas o declaraciones de impuestos). Obligado Solidario: 1. Identificación oficial. 2. Comprobante de domicilio. 3. Comprobante de ingresos de 3 meses a la fecha (Recibos de nómina, facturas o declaraciones de impuestos). El inquilino deberá demostrar capacidad de pago 3 a 1 respecto al monto de renta.",
+        "contact": {
+            "name": "Sandra Ortiz Martinez",
+            "phones": [
+                "5565462571",
+                "+525537189630"
+            ],
+            "email": "sortiz@century21hera.com"
+        },
+        "apoiments": [],
+        "images": [
+            "https://century21mexico.com/media/cache/web/rc/X0V3PzRd/uploads/309/propiedades/404655/5c58846e88ef7.jpg",
+            "https://century21mexico.com/media/cache/web/rc/NAM0H8LO/uploads/309/propiedades/404655/5c4a4ee446ac7.jpg",
+            "https://century21mexico.com/media/cache/web/rc/bUHaO5Rb/uploads/309/propiedades/404655/5c4a4ee3d98b6.jpg",
+            "https://century21mexico.com/media/cache/web/rc/bamYkXQo/uploads/309/propiedades/404655/5c4a4ee29005f.jpg"
+        ]
+    }
+]

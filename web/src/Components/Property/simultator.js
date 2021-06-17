@@ -106,7 +106,7 @@ export default function PropertySimulator({ propertyCost }) {
                 <PrettoSlider valueLabelDisplay="auto" aria-label="pretto slider"
                     name="cost"
                     defaultValue={100000}
-                    min={100000}
+                    min={propertyCost * 0.25}
                     max={propertyCost * 0.8}
                     valueLabelFormat={valueLabelFormat}
                     value={cost}

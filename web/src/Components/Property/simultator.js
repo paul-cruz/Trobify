@@ -47,7 +47,7 @@ const PrettoSlider = withStyles({
 export default function PropertySimulator({ propertyCost }) {
     const classes = useStyles();
     const [duration, setDuration] = useState(5);
-    const [cost, setCost] = useState(100000);
+    const [cost, setCost] = useState(propertyCost * 0.25);
     const [total, setTotal] = useState(getTotal());
 
     function handleCahnge(label, value) {

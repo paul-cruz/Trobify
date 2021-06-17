@@ -7,9 +7,16 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { newProperty } from "../../Utils/functions";
+import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import Loading from '../Loading';
+
+const containerStyle = {
+  width: '100%',
+  height: '400px'
+};
 
 export default function FormNewProperty() {
-  const [title, setTitle] = useState("");
+  const [tittle, setTittle] = useState("");
   const [price, setPrice] = useState("");
   const [land, setLand] = useState("");
   const [built, setBuilt] = useState("");
@@ -28,11 +35,27 @@ export default function FormNewProperty() {
   const [name, setName] = useState("");
   const [tel1, setTel1] = useState("");
   const [tel2, setTel2] = useState("");
+  const [email, setEmail] = useState("");
+  const [links, setLinks] = useState("");
+  const [lat, setLat] = useState("");
+  const [lng, setLng] = useState("");
+
+    const handleEvent = (e) =>{
+        setLat(e.latLng.lat);
+        setLng(e.latLng.lng);
+    }
+    
+    const { isLoaded } = useJsApiLoader({
+        id: 'google-map-script',
+        googleMapsApiKey: "AIzaSyAgDNp9ODM9haCAXoEtVKq3fGSRkrQCIgI"
+    })
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const images = links.split(",");
     const property = {
-      title,
+      tittle,
       price,
       features: {
         land,
@@ -49,8 +72,8 @@ export default function FormNewProperty() {
         zip,
       },
       location: {
-        lat: 19.3862727,
-        long: -99.1714229,
+        lat,
+        lng,
       },
       description,
       type,
@@ -58,14 +81,19 @@ export default function FormNewProperty() {
       floors,
       contact: {
         name,
-        tel1,
-        tel2,
+        "phones":[
+          tel1,
+          tel2,
+        ],
+        email,
       },
+      apoiments:[],
+      images,
     };
     newProperty(property).then((res) => {
       if (res.data.msg === "Inserted") {
         alert("Inmueble agregado con exito");
-        setTitle("");
+        setTittle("");
         setPrice("");
         setLand("");
         setBuilt("");
@@ -100,12 +128,12 @@ export default function FormNewProperty() {
               <Card.Header as="h5">Información</Card.Header>
               <Card.Body>
                 <Form.Row>
-                  <Form.Group as={Col} controlId="txtTitle" md="8">
+                  <Form.Group as={Col} controlId="txtTittle" md="8">
                     <Form.Label column="sm">Encabezado</Form.Label>
                     <Form.Control
                       type="text"
                       placeholder="Escribe el encabezado de tu publicación"
-                      onChange={(e) => setTitle(e.target.value)}
+                      onChange={(e) => setTittle(e.target.value)}
                       required
                       autoFocus
                     />
@@ -197,7 +225,14 @@ export default function FormNewProperty() {
                   </Form.Group>
                 </Form.Row>
                 <Form.Row>
-                  <Form.File id="images" label="Imagenes del inmueble" custom />
+                <Form.Group as={Col} controlId="txtLinks">
+                    <Form.Control
+                      placeholder="Links de las imagenes separados por ','"
+                      onChange={(e) => setLinks(e.target.value)}
+                      required
+                    />
+                    <Form.Label column="sm">Imagenes (links)</Form.Label>
+                  </Form.Group>
                 </Form.Row>
               </Card.Body>
             </Card>
@@ -248,6 +283,26 @@ export default function FormNewProperty() {
             </Card>
             <Card bg="light" text="dark">
               <Card.Header as="h5">Ubicación</Card.Header>
+              <Card.Body>
+                {
+                  isLoaded ? 
+                    <GoogleMap
+                        
+                        mapContainerStyle={containerStyle}
+                        center={{ lat:19.5041845, lng:-99.1489003 }}
+                        zoom={15}
+                    >
+                        <Marker
+                            position={{ lat:19.5041845, lng:-99.1489003 }}
+                            draggable = {true}
+                            onDrag = {handleEvent}
+                            onDragStart = {handleEvent}
+                            onDragEnd = {handleEvent}
+                        />
+                    </GoogleMap >
+                 : <Loading />
+                }
+              </Card.Body>
             </Card>
             <Card bg="light" text="dark">
               <Card.Header as="h5">Descripción</Card.Header>
@@ -330,6 +385,14 @@ export default function FormNewProperty() {
                       onChange={(e) => setTel2(e.target.value)}
                     />
                     <Form.Label column="sm">Telefono secundario</Form.Label>
+                  </Form.Group>
+                  <Form.Group as={Col} controlId="txtEmail">
+                    <Form.Control
+                      type="email"
+                      placeholder="Correo electrónico"
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <Form.Label column="sm">Correo electrónico</Form.Label>
                   </Form.Group>
                 </Form.Row>
                 <Form.Row>

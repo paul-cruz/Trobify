@@ -39,6 +39,7 @@ export default function SignUpForm() {
     const classes = useStyles();
     const [first_name, setFirstName] = useState("");
     const [last_name, setLastName] = useState("");
+    const [phone_number, setPhoneNumber] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -47,6 +48,7 @@ export default function SignUpForm() {
         registerUser({
             first_name,
             last_name,
+            phone_number,
             email,
             password
         }).then((res) => {
@@ -103,10 +105,21 @@ export default function SignUpForm() {
                                         variant="outlined"
                                         required
                                         fullWidth
-                                        label="Correo electrónico"
-                                        name="txtEmail"
+                                        label="Teléfono"
+                                        name="txtOhone_Number"
                                         onChange={(e) => setEmail(e.target.value)}
                                         autoComplete="email"
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        label="Correo electrónico"
+                                        name="txtPhoneNumber"
+                                        onChange={(e) => setPhoneNumber(e.target.value)}
+                                        autoComplete="phone"
                                     />
                                 </Grid>
                                 <Grid item xs={12}>

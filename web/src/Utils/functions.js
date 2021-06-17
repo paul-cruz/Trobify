@@ -109,3 +109,15 @@ export const updateUser = (id, user) => {
       return error.response;
     });
 };
+
+export const updateProperty = (id, property) => {
+  return axios
+    .put(`${process.env.REACT_APP_API}property/${id}`, property, {
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+    .then((res) => {
+      return res.data;
+    });
+};

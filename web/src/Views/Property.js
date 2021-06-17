@@ -11,6 +11,7 @@ import { Alert } from 'react-bootstrap';
 import MainInfo from '../Components/Property/mainInfo';
 import PropertyContact from '../Components/Property/contact';
 import PropertySimulator from '../Components/Property/simultator';
+import Schedule from '../Components/Property/schedule';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -92,6 +93,7 @@ export default function PropertyView() {
                 <Grid container item lg={LG_SCREEN_GRID} md={LG_SCREEN_GRID} sm={SM_SCREEN_GRID}>
                     <Grid item xs={SM_SCREEN_GRID}>
                         <Paper className={classes.paper}>Calendar</Paper>
+                        <Schedule id = {property._id} initialEvents = {property.apoiments}/>
                     </Grid>
                     <Grid item xs={SM_SCREEN_GRID}>
                         <PropertySimulator propertyCost={property.price}/>

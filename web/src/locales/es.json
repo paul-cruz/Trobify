@@ -21,5 +21,11 @@
     "app.property.simulator.duration-label": "Duración del credito: ",
     "app.property.simulator.total-label": "Total a pagar: ",
     "app.property.simulator.month-label": "Plazo en meses: ",
-    "app.property.simulator.interest-label": "Intereses generados: "
+    "app.property.simulator.interest-label": "Intereses generados: ",
+    "app.menu.search": "Buscar",
+    "app.menu.notif": "Notificaciones",
+    "app.menu.profile": "Perfil",
+    "app.menu.new": "Nuevo",
+    "app.menu.sche": "Agenda",
+    "app.menu.report": "Reportar un error"
 }

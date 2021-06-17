@@ -45,7 +45,7 @@ export default function ReportForm() {
   }
   
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="gridDiv">
       <Card border="dark" bg="light" text="dark">
         <Card.Header as="h4">
           ¿Tuviste algun fallo en la página? ¡Cuentanos!

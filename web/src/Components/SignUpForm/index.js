@@ -3,7 +3,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
@@ -11,7 +11,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import {registerUser} from '../../Utils/functions';
+import {registerUser, loginUser} from '../../Utils/functions';
+import {setLoggedUserId, getLoggedUserId} from '../../Utils/auth';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -42,8 +43,9 @@ export default function SignUpForm() {
     const [phone_number, setPhoneNumber] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
+    
     const handleSubmit = async (e) => {
+        
         e.preventDefault();
         registerUser({
             first_name,
@@ -53,16 +55,35 @@ export default function SignUpForm() {
             password
         }).then((res) => {
             if (res.data.msg === 'Inserted') {
-                alert("Usuario insertado");
-                setFirstName("");
-                setLastName("");
-                setEmail("");
-                setPassword("");
+                //alert("Usuario insertado");
+                loginUser({
+                    email,
+                    password
+                }).then((res) => {
+                    if (res.data.msg === 'Logged') {
+                        setLoggedUserId(res.data.id);
+                        setFirstName("");
+                        setLastName("");
+                        setEmail("");
+                        setPassword("");
+                        setPhoneNumber("");
+                        
+                    } else {
+                        alert(res.data.msg);
+                    }
+                })
+                
             } else {
                 alert("Revisa los datos");
             }
         })
     }
+
+    if (getLoggedUserId()) {
+        return <Redirect to='/app/properties' />
+       }
+
+
     return (
         <Card className={classes.root}>
             <CardContent>
@@ -105,8 +126,8 @@ export default function SignUpForm() {
                                         variant="outlined"
                                         required
                                         fullWidth
-                                        label="Teléfono"
-                                        name="txtOhone_Number"
+                                        label="Correo electrónico"
+                                        name="txtEmailr"
                                         onChange={(e) => setEmail(e.target.value)}
                                         autoComplete="email"
                                     />
@@ -116,7 +137,7 @@ export default function SignUpForm() {
                                         variant="outlined"
                                         required
                                         fullWidth
-                                        label="Correo electrónico"
+                                        label="Teléfono"
                                         name="txtPhoneNumber"
                                         onChange={(e) => setPhoneNumber(e.target.value)}
                                         autoComplete="phone"

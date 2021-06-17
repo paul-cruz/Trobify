@@ -10,6 +10,10 @@ import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PropertyCarousel from './carousel';
 import { yellow } from '@material-ui/core/colors';
+import { getUser, updateUser } from '../../Utils/functions';
+import { getLoggedUserId } from '../../Utils/auth';
+import { useState } from 'react';
+import Toast from 'react-bootstrap/Toast';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -37,6 +41,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PropertyTumbnail({ property }) {
+    const [ShowToast, setShowToast] = useState(false);
+    const [toastText, setToastText] = useState("Se agregó el inmueble a favoritos!");
     const classes = useStyles();
 
     return (
@@ -55,9 +61,33 @@ export default function PropertyTumbnail({ property }) {
                         <NotificationsActiveIcon style={{ color: yellow[800] }} />
                     </IconButton>
                     <Button variant="success" className="schbtn">Agendar cita</Button>
-                    <IconButton aria-label="favorite">
+                    <IconButton aria-label="favorite" onClick={()=>{
+                        getUser(getLoggedUserId()).then((user)=>{
+                            if(user && property && user.favorites){
+                                if(user.favorites.find(element => element.id == property._id)){
+                                    setToastText("El inmueble ya está en favoritos");
+                                }
+                                else{
+                                    user.favorites.push({id : property._id});
+                                    updateUser(getLoggedUserId(), { favorites : user.favorites });
+                                    setToastText("Se agregó el inmueble a favoritos!");
+                                }
+                                setShowToast(true);
+                            } else{
+                                console.log(user);
+                                console.log(property);
+                                console.log("Hubo un error al agregar el inmueble a favoritos");
+                            }
+                        });
+                    }}>
                         <FavoriteIcon color="secondary" />
                     </IconButton>
+                    <Toast show={ShowToast} onClose={()=>{setShowToast(false)}}>
+                        <Toast.Header>
+                            <strong className="mr-auto">Trobify</strong>
+                        </Toast.Header>
+                        <Toast.Body>{toastText}</Toast.Body>
+                    </Toast>
                 </div>
             </div>
         </Card>

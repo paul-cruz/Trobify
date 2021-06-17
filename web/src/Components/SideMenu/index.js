@@ -10,7 +10,7 @@ export default function SideMenu() {
             <h4>Trobify <ApartmentIcon /></h4>
             <ul className="side-ul">
                 <li className="side-li"><button className="btn btn-dark"><Link className="linkMenu" to="/app/properties">Buscar</Link></button></li>
-                <li className="side-li"><button className="btn btn-dark"><Link className="linkMenu" to="/app/grid">Notificaciones</Link></button></li>
+                <li className="side-li"><button className="btn btn-dark"><Link className="linkMenu" to="/app/favorites">Favoritos</Link></button></li>
                 <li className="side-li"><button className="btn btn-dark">Alertas</button></li>
                 <li className="side-li"><button className="btn btn-dark"><Link className="linkMenu" to="/app/profile">Perfil</Link></button></li>
                 <li className="side-li"><button className="btn btn-dark"><Link className="linkMenu" to="/newproperty">Nuevo</Link></button></li>

@@ -22,10 +22,10 @@ export default function SideMenu() {
                 </li>
                 <li className="side-li">
                     <button className="btn btn-dark">
-                        <Link className="linkMenu" to="/app/grid">
+                        <Link className="linkMenu" to="/app/favorites">
                             <FormattedMessage
                                 id="app.menu.notif"
-                                defaultMessage="Notifications"
+                                defaultMessage="Favoritos"
                             />
                         </Link>
                     </button>

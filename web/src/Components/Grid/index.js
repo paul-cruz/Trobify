@@ -9,7 +9,9 @@ export default function Grid(props) {
     return (
         <Container>
             <Row>
-                {getComponents(props)}
+                {props.properties.map((property, index)=>{
+                    return <Col className="thumbnail" xl={3} lg={4} md={6} sm={12} key={index}><Thumbnail property={property}/></Col>;
+                })}
             </Row>
         </Container>
     );

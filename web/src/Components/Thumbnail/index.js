@@ -5,6 +5,10 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { useState, useEffect } from 'react';
+import { getUser, updateUser } from '../../Utils/functions';
+import { getLoggedUserId } from '../../Utils/auth';
+import Loading from '../Loading'
 
 const useStyles = makeStyles({
   root: {
@@ -23,37 +27,51 @@ const useStyles = makeStyles({
   },
 });
 
-export default function OutlinedCard(props, user) {
-  const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
-
-  return (
-    <Card className="MuiPaper-root MuiCard-root jss224 MuiPaper-outlined MuiPaper-rounded" variant="outlined">
-      <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small" onClick={addFav}>Add to favorites</Button>
-      </CardActions>
-    </Card>
-  );
+export default function OutlinedCard(props) {
+	const property = props.property;
+	const classes = useStyles();
+	const [user, setUser] = useState({});
+	useEffect(() => {
+		getUser(getLoggedUserId()).then((data) => {
+			setUser(data);
+		});
+	}, []);
+	return (
+		user ?
+		<Card className="MuiPaper-root MuiCard-root jss224 MuiPaper-outlined MuiPaper-rounded" variant="outlined">
+		<CardContent>
+			<Typography className={classes.title} color="textSecondary" gutterBottom>
+				{property && property.tittle ? property.tittle : "El propietario no espeificó un nombre para este inmueble"}
+			</Typography>
+			<Typography variant="h5" component="h2">
+				{property && property.description ? property.description : "El propietario no espeificó una descripción"}
+			</Typography>
+			<Typography className={classes.pos} color="textSecondary">
+				{property && property.type ? property.type : "El propietario no espeificó el tipo de inmueble"}
+			</Typography>
+			<Typography variant="body2" component="p">
+				Edad: {property && property.age ? `${property.age} años` : "El propietario no espeificó una edad para este inmueble"}<br/>
+				Pisos: {property && property.floors ? property.floors : "El propietario no espeificó una cantidad de pisos"}<br/>
+				Propietario: {property && property.contact.name ? property.contact.name : "No hay propietario especificado"}
+			</Typography>
+		</CardContent>
+		<CardActions>
+			<Button size="small" onClick={()=>{deleteFav(user, property)}}>Eliminar de favoritos</Button>
+		</CardActions>
+		</Card> : <Loading/>
+	);
 }
 
-function addFav(){
-  //user.favoritos.push(props.id);
-  //Aquí se podría guardar en la base de datos el usuario con el nuevo inmueble agregado a favoritos
-  console.log("Se agregó el inmueble a favoritos!");
+function deleteFav(user, property){
+	if(user && property && user.favorites){
+		const index = user.favorites.indexOf(user.favorites.find(element => element.id == property._id));
+		if (index > -1) {
+			user.favorites.splice(index, 1);
+			updateUser(getLoggedUserId(), { favorites : user.favorites });
+			console.log("Se quitó el inmueble de favoritos!");
+		}
+	} else{
+		console.log("Hubo un error al quitar el inmueble de favoritos");
+	}
+	window.location.reload();
 }

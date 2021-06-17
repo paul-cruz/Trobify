@@ -1,5 +1,4 @@
 import MasterPage from '../Views/MasterPage';
-import GridView from '../Components/GridView'
 import SearchPropertyView from '../Views/searchPropery';
 import NotFound from '../Components/NotFound';
 import RedirectNotFound from '../Components/Redirect/not-found';
@@ -9,6 +8,7 @@ import SignUp from '../Views/SignUp';
 import Login from '../Views/Login';
 import ReportForm from '../Components/ReportForm';
 import ProfileView from '../Components/ProfileView/View';
+import Favorites from '../Views/Favorites';
 
 const routes = [
     /*{
@@ -40,8 +40,8 @@ const routes = [
                 component: PropertyView,
             },
             {
-                path: '/app/grid',
-                component: GridView,
+                path: '/app/favorites',
+                component: Favorites,
             },
             {
                 path: '/app/report',

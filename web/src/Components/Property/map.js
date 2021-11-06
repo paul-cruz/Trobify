@@ -10,7 +10,7 @@ const containerStyle = {
 function PropertyMap({ lat, lng }) {
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: "AIzaSyAgDNp9ODM9haCAXoEtVKq3fGSRkrQCIgI"
+        googleMapsApiKey: ""
     })
 
     return isLoaded ? (
